@@ -14,5 +14,6 @@ jobs:
       - name: Test QR generator
         run: |
           mkdir -p qr_codes
+          chmod 777 qr_codes
           docker run --rm -v "$PWD/qr_codes:/app/qr_codes" qr-code-generator-app
           test -s qr_codes/qrcode.png
