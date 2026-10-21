@@ -1,0 +1,4 @@
+qr_codes/
+logs/
+.git/
+__pycache__/
