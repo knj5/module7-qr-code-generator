@@ -10,6 +10,7 @@ RUN useradd -m myuser && \
     chown myuser:myuser logs qr_codes
 
 COPY --chown=myuser:myuser . .
+RUN mkdir -p /app/qr_codes && chown -R myuser:myuser /app/qr_codes
 
 USER myuser
 
